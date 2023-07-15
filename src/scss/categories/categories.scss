@@ -1,0 +1,14 @@
+.categories-list {
+    list-style: none;
+    &__item {
+        display: inline-block;
+        padding: 5px;
+        margin: 20px;
+        border-radius: 10px;
+        cursor: pointer;
+    }
+    .active {
+        background-color: rgba(0, 0, 0, 0.592);
+        color: #fff;
+    }
+}
