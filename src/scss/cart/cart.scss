@@ -1,0 +1,30 @@
+.cart {
+    display: flex;
+    justify-content: space-between;
+}
+
+.cart-product {
+    width: 130%;
+    margin: 50px;
+    img {
+        height: 150px;
+    }
+    display: flex;
+    flex-direction: row;
+    height: 150px;
+    align-items: center;
+    justify-content: space-between;
+    .change-quantity {
+        display: flex;
+        height: 50px;
+        button {
+            margin: 0 15px;
+            padding: 15px;
+            color: #fe5f1f;
+            border: 1px solid #fe5f1f;
+            background-color: #ffff;
+            border-radius: 50%;
+        }
+    }
+
+}

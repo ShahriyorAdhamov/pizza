@@ -12,12 +12,12 @@ export const cartSlice = createSlice({
             state.cartProducts = action.payload
         },
         addQuantity(state, action) {
-            const cartProduct = state.cartProducts.find(item => item.id == action.payload)
+            const cartProduct = state.cartProducts.find(item => item.id === action.payload)
             cartProduct.quantity++;
 
         },
         subQuantity(state, action) {
-            const cartProduct = state.cartProducts.find(item => item.id == action.payload)
+            const cartProduct = state.cartProducts.find(item => item.id === action.payload)
             const index = state.cartProducts.indexOf(cartProduct)
             if(cartProduct.quantity > 1) {
                 cartProduct.quantity--;

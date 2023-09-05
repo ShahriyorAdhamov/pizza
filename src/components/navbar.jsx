@@ -4,7 +4,7 @@ import '../scss/navbar/index.css'
 import { useNavigate } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
-import axios from '../axios/index'
+import axios from '../axios'
 import { useEffect } from 'react'
 import { getCartProductsSuccess } from '../slice/cart'
 import { searchTxtContainer ,searchTxtFunc} from '../slice/search';
@@ -16,18 +16,20 @@ function Navbar() {
   const dispatch = useDispatch()
   const {cartProducts} = useSelector(state => state.cart)
   const navigate = useNavigate()
-  useEffect(() => {
-    axios.get('/cart').then(({data}) => {
-      dispatch(getCartProductsSuccess(data))
-    })
-  },[])
+  // useEffect(() => {
+  //   axios.get('/cart').then(({data}) => {
+  //     dispatch(getCartProductsSuccess(data))
+  //   })
+  // },[])
 
 
+useEffect(() => {
   if(searchTxt){
     const searchFilter = (searchTxt, products) =>         products.filter(item => item.title.toLowerCase().indexOf(searchTxt) > -1 );
     dispatch(searchTxtContainer(searchFilter(searchTxt, products)));
 }
 dispatch(searchTxtFunc(searchTxt))
+}, [searchTxt, dispatch, products])
  
   return (
     <div className='navbar'>

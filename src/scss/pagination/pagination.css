@@ -1,0 +1,20 @@
+.pagination li {
+  display: inline-block;
+  cursor: pointer;
+}
+.pagination li a {
+  list-style: none;
+  border-radius: 50%;
+  border: 1px solid #fe5f1f;
+  padding: 15px;
+  margin: 10px;
+  color: #fe5f1f;
+}
+.pagination li a:hover {
+  background-color: #fe5f1f;
+  color: white;
+}
+.pagination .selected a {
+  background-color: #fe5f1f;
+  color: white;
+}/*# sourceMappingURL=pagination.css.map */

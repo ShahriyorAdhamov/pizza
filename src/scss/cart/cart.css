@@ -1,0 +1,29 @@
+.cart {
+  display: flex;
+  justify-content: space-between;
+}
+
+.cart-product {
+  width: 130%;
+  margin: 50px;
+  display: flex;
+  flex-direction: row;
+  height: 150px;
+  align-items: center;
+  justify-content: space-between;
+}
+.cart-product img {
+  height: 150px;
+}
+.cart-product .change-quantity {
+  display: flex;
+  height: 50px;
+}
+.cart-product .change-quantity button {
+  margin: 0 15px;
+  padding: 15px;
+  color: #fe5f1f;
+  border: 1px solid #fe5f1f;
+  background-color: white;
+  border-radius: 50%;
+}/*# sourceMappingURL=cart.css.map */

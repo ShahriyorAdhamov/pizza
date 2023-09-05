@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
-    searchTxtProducts: null,
-    searchTxt:null
+    searchTxtProducts: [],
+    searchTxt:''
 }
 
 export const searchSlice = createSlice({

@@ -1,11 +1,9 @@
 import './App.css';
-import CardsList from './components/cards-list';
-import Card from './components/card';
 import Cart from './components/cart';
-import Main from './components/main';
+import Main from './pages/main';
 import { Route, Routes } from 'react-router-dom';
-
 import Navbar from './components/navbar';
+import NotFound from './pages/not-found';
 
 function App() {
   return (
@@ -15,6 +13,7 @@ function App() {
         <Route path='/' element = {<Main/>}/>
         <Route path='/cart' element = {<Cart/>}/>
         {/* <Route path='/:id' element={<Card/>}/> */}
+        <Route path='*' element = {<NotFound/>}/>
       </Routes>
     </div>
   );

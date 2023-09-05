@@ -14,13 +14,12 @@ function Card({card}) {
   
   const addToCart = (id) => {
     const allProducts = [...products]
-    let newCartProduct = allProducts.find((item) => item.id == id)
-    if(!cartProducts.find(item => item.id == id)){
+    let newCartProduct = allProducts.find((item) => item.id === id)
+    if(!cartProducts.find(item => item.id === id)){
       const newCart = [...cartProducts]
       newCartProduct = {...newCartProduct, quantity: 1};
       newCart.push(newCartProduct)
       dispatch(getCartProductsSuccess(newCart))
-      axios.post('/cart', {...newCartProduct})
     }
   }
 

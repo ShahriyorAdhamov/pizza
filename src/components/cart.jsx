@@ -4,23 +4,18 @@ import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { getCartProductsSuccess } from '../slice/cart'
 import CartProduct from './cart-product'
+import '../scss/cart/cart.css'
 
 function Cart() {
-  // const [totalPrice, setTotalPrice] = useState(0)
   const {cartProducts} = useSelector(state => state.cart)
   const dispatch = useDispatch()
-  useEffect(() => {
-    axios.get('/cart').then(({data}) => {
-      dispatch(getCartProductsSuccess(data))
-    })
-  },[])
 
   return (
     <div className="cart">
       <div className='cart-products'>
-        { cartProducts.map((item) => (
+        { cartProducts.length? cartProducts.map((item) => (
           <CartProduct product = {item}/>
-        ))}
+        )): 'пусто'}
       </div>
       <div className='cartPrice'>
         <h2>Total price:</h2>
@@ -36,3 +31,4 @@ function Cart() {
 }
 
 export default Cart
+

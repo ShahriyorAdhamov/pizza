@@ -1,0 +1,27 @@
+.pagination {
+    
+    li {
+        display: inline-block;
+        cursor: pointer;
+        a {
+            list-style: none;
+            border-radius: 50%;
+            border: 1px solid #fe5f1f;
+            padding: 15px;
+            margin: 10px;
+          color: #fe5f1f;  
+          &:hover {
+            background-color: #fe5f1f;
+            color: #ffff;
+
+        }
+        }
+    }
+
+        .selected {
+            a {
+                background-color: #fe5f1f;
+                color: #ffff;
+            }
+        }
+}

@@ -1,19 +1,12 @@
-import React, { useEffect, useState } from 'react'
-import axios from '../axios/index'
+import React from 'react'
 
 import '../scss/categories/categories.css'
 
-function Categories() {
-  const [categories, setCategories] = useState([])
-  const [categoryActive, setCategoryActive]  = useState(0)
-  useEffect(() => {
-    axios.get('/categories').then(({data}) => {
-      setCategories(data)
-    })
-  }, [])
+function Categories({setCategoryActive, categoryActive}) {
+  const categories = [ "Все", "Мясные", "Острые", "Новые"];
 
   const activeCategory = (i) => {
-    setCategoryActive(i)
+    setCategoryActive(i);
   }
   return (
       <ul className='categories-list'>
