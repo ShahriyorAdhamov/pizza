@@ -5,18 +5,25 @@ import { useDispatch, useSelector } from 'react-redux'
 import { getCartProductsSuccess } from '../slice/cart'
 import CartProduct from './cart-product'
 import '../scss/cart/cart.css'
+import { useNavigate } from 'react-router-dom'
 
 function Cart() {
-  const {cartProducts} = useSelector(state => state.cart)
-  const dispatch = useDispatch()
+  const {cartProducts} = useSelector(state => state.cart);
+  const navigate = useNavigate();
 
   return (
     <div className="cart">
       <div className='cart-products'>
         { cartProducts.length? cartProducts.map((item) => (
           <CartProduct product = {item}/>
-        )): 'пусто'}
+        )): 
+        <div className='empty'>
+          <img src='/image/3144456.png' alt='img'/>
+          <button onClick={() => navigate('/')} className='back-button'>Назад</button>
+        </div>
+        }
       </div>
+        
       <div className='cartPrice'>
         <h2>Total price:</h2>
         <h4>
@@ -24,7 +31,9 @@ function Cart() {
           item.quantity * item.price
           )).reduce((acc, item) => acc + item, 0)}
         </h4>
+        <button className='next-button'>next</button>
       </div>
+      
     </div>
 
   )

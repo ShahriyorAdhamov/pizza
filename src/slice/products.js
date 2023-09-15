@@ -11,14 +11,16 @@ export const productsSlice = createSlice({
     reducers: {
         getProductsLoading (state) {
             state.isLoading = true;
+            state.products = []
         },
         getProductsSuccess(state, action) {
             state.isLoading = false;
             state.products = action.payload;
         },
-        getArticlesFail: (state, action) => {
+        getProductsFail: (state, action) => {
             state.isLoading = false; 
             state.error = action.payload;
+            state.products = []
         },
     }
 })

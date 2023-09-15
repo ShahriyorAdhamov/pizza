@@ -7,7 +7,6 @@ import { getProductsLoading } from '../slice/products'
 
 
 function CardsList() {
-  const dispatch = useDispatch()
   const {searchTxtProducts , searchTxt} = useSelector(state => state.search)
   const {isLoading, products} = useSelector(state => state.products)
   const [filteredProducts, setFilteredProducts] = useState([])
@@ -24,8 +23,10 @@ function CardsList() {
   
   return (
     <div className='cards-list'>
-      {filteredProducts.map((card) => (
-        isLoading? [...new Array(6)].map(() => <Skeleton/>) :<Card
+      {isLoading? [...new Array(6)].map(() => <Skeleton/>)
+      :
+      filteredProducts.map((card) => (
+        <Card
         key={card.id}
         card = {card}
         />

@@ -2,11 +2,9 @@ import React, { useEffect } from 'react'
 import '../scss/card/index.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { getCartProductsSuccess } from '../slice/cart'
-import axios from '../axios/index'
 
 function Card({card}) {
   const dispatch = useDispatch()
-
   const {products} = useSelector(state => state.products)
   const {cartProducts} = useSelector(state => state.cart)
   const {title, description, price, id, img} = card
@@ -34,7 +32,7 @@ function Card({card}) {
           <p className='card__description'>{description}</p>
         </div>
         <div className='card-body__bottom'>
-            <p className='card__price'>от {price}</p>
+            <p className='card__price'>{price} сум</p>
             <button onClick={() => addToCart(id)} className='card-body__bottom__button'>+ добавить</button>
         </div>
         

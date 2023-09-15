@@ -1,0 +1,15 @@
+.sort{
+    .active, span {
+        color: rgba(255, 162, 0, 0.932);
+        cursor: pointer;
+    }
+    ul {
+        position: relative;
+        cursor: pointer;
+        left: 80px;
+        li {
+            list-style: none;
+        }
+    }
+
+}

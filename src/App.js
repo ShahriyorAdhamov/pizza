@@ -4,6 +4,7 @@ import Main from './pages/main';
 import { Route, Routes } from 'react-router-dom';
 import Navbar from './components/navbar';
 import NotFound from './pages/not-found';
+import Card from './components/card';
 
 function App() {
   return (
