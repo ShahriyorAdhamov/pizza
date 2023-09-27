@@ -1,4 +1,3 @@
-import {useState} from 'react'
 import '../scss/sort/sort.css'
 
 function Sort({sortList, setActive, setSortIndex, active, sortIndex}) {

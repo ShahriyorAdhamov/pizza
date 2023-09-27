@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import '../scss/card/index.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { getCartProductsSuccess } from '../slice/cart'
@@ -18,6 +18,7 @@ function Card({card}) {
       newCartProduct = {...newCartProduct, quantity: 1};
       newCart.push(newCartProduct)
       dispatch(getCartProductsSuccess(newCart))
+      localStorage.setItem('cart', JSON.stringify(newCart))
     }
   }
 

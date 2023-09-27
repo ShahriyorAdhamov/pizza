@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import Card from './card'
 import '../scss/cards-list/index.css'
-import { useDispatch, useSelector } from 'react-redux'
+import {useSelector } from 'react-redux'
 import Skeleton from './skeleton'
-import { getProductsLoading } from '../slice/products'
 
 
 function CardsList() {

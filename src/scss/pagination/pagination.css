@@ -1,3 +1,6 @@
+.pagination {
+  margin-bottom: 50px;
+}
 .pagination li {
   display: inline-block;
   cursor: pointer;

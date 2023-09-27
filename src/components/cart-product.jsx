@@ -1,6 +1,5 @@
 import React from 'react'
-import axios from '../axios/index'
-import {useDispatch, useSelector}from 'react-redux'
+import {useDispatch}from 'react-redux'
 import { addQuantity, subQuantity } from '../slice/cart'
 
 
@@ -19,7 +18,7 @@ function CartProduct({product}) {
     }
   return (
     <div key={id} className='cart-product'>
-        <img src={img} alt="image" className='cart-product__image' />
+        <img src={img} alt="pizza" className='cart-product__image' />
         <h2>{title}</h2>
         <p>{price}</p>
         <div className='change-quantity'>

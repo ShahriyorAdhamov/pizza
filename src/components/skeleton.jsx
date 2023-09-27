@@ -2,11 +2,11 @@ import React from "react"
 import ContentLoader from "react-content-loader"
 
 const Skeleton = (props) => (
-  <ContentLoader 
+  <ContentLoader className="skeleton"
     speed={2}
-    width={280}
+    width={350}
     height={470}
-    viewBox="0 0 280 470"
+    viewBox="0 0 350 470"
     backgroundColor="#f3f3f3"
     foregroundColor="#ecebeb"
     {...props}
